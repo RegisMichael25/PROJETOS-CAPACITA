@@ -17,10 +17,13 @@ public class TodoListService {
     public TodoListService (){}
     
     public ArrayList<String> addTask(String task) {
-        
-        tasks.add(task);
-        
-        return tasks;
+        if(!task.isEmpty()) {
+           tasks.add(task);
+           System.out.println("Tarefa criada com sucesso!");
+           return tasks;
+        }
+        System.out.println("A tarefa deve conter pelo menos 1 caractere que faça sentido para voce! ");
+        return null;
     }
     
 }
