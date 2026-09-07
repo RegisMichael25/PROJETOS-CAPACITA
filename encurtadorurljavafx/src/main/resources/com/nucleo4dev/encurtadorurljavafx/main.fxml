@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+    <VBox id="VBoxPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="com.nucleo4dev.encurtadorurljavafx.controller.MainController">
+        <Label fx:id="teste" text="Teste"/>
+        <padding>
+            <Insets top="28" right="28" bottom="28" left="28"/>
+        </padding>
+        <Label text="Encurtador de Links" />
+        <Label text="Cole a URL, clique em Encurtar e pronto!" />
+        
+        <TextField fx:id="urlField" promptText="Cole a sua URL aqui: " />
+        <Button text="Encurtar" fx:id="encurtarButton" onAction="#onEncurtarClick" />
+        <StackPane >
+            <ProgressIndicator fx:id="progressIndicator" maxHeight="28" maxWidth="28" />  
+        </StackPane>
+        <HBox alignment="CENTER" spacing="10" > 
+            <Label fx:id="resultadoLabel" />
+            <Button fx:id="copiarButton" text="Copiar" onAction="#onCopiarLink" />
+        </HBox>
+    </VBox>
