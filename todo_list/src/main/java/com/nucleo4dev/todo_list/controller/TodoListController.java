@@ -23,25 +23,22 @@ public class TodoListController {
 
     @FXML
     private void addTask() throws IOException {
-        array = service.addTask(inputTask.getText());
-        
-        ProgressIndicator load = new ProgressIndicator(-1);
-        for(int i = 0; i <= array.size(); i++) 
-        {
-            vCheckBox.getChildren().add(load);
-            HBox hbox = new HBox();
-            CheckBox check = new CheckBox();
-            Button but = new Button();
-            check.setText(array.get(i));
-            check.setStyle("-fx-padding: 5px;");
-            but.setText("Remover");
-            hbox.setMargin(check, new Insets(0, 100, 0, 0));
-            hbox.getChildren().addAll(check, but);
-            vCheckBox.getChildren().addAll(hbox);
-        }
-        
-        inputTask.setText("");
-    }
+    array = service.addTask(inputTask.getText());
+    
+    String novoItem = array.get(array.size() - 1);
+    
+    HBox hbox = new HBox();
+    CheckBox check = new CheckBox();
+    Button but = new Button();
+    check.setText(novoItem);
+    check.setStyle("-fx-padding: 5px;");
+    but.setText("Remover");
+    HBox.setMargin(check, new Insets(0, 100, 0, 0));
+    hbox.getChildren().addAll(check, but);
+    vCheckBox.getChildren().add(hbox);
+    
+    inputTask.setText("");
+}
     
     @FXML
     private void removeTask() throws IOException {
