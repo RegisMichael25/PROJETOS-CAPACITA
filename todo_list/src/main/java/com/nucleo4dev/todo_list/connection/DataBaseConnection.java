@@ -12,12 +12,14 @@ import java.sql.SQLException;
  * @author pop_osregismichael
  */
 public class DataBaseConnection {
-   private String url = "conexao";
+   private String url = "jdbc:sqlite:com/nucleo4dev/todolist/banco/tarefas.db";
 
    public Connection connection() {
        try (Connection con = DriverManager.getConnection(url)) {
            if(con != null) {
+               con.createStatement().execute(url);
                System.out.println("Concexão efetivada com sucesso!!");
+               con.prepareStatement("CREATE DATABASE tarefas IF NOT EXISTS");
                return con;
            }
        } catch(SQLException ex) {

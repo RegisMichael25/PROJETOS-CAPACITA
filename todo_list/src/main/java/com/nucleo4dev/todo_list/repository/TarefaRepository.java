@@ -24,10 +24,10 @@ public class TarefaRepository {
         this.con = new DataBaseConnection().connection();
     }
 
-    public void salvar() {
+    public void salvar(Tarefa tarefa) {
         String sql = "INSERT INTO table (titulo, descricao, concluida) VALUES (?, ?, ?)";
         try {
-            con.prepareStatement(sql);
+            con.prepareStatement(sql).executeQuery();
         } catch (SQLException ex) {
             System.out.println(ex.getStackTrace());
         }

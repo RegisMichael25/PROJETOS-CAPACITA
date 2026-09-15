@@ -43,4 +43,8 @@ public class Tarefa {
     public void setConcluida(boolean concluida) {
         this.concluida = concluida;
     }
+    
+    public Tarefa isNull(Tarefa tarefa) {
+        return tarefa;
+    }
 }

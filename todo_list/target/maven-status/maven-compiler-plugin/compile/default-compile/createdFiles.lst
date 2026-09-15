@@ -1,0 +1,7 @@
+com/nucleo4dev/todo_list/repository/TarefaRepository.class
+com/nucleo4dev/todo_list/connection/DataBaseConnection.class
+com/nucleo4dev/todo_list/controller/TodoListController.class
+com/nucleo4dev/todo_list/model/Tarefa.class
+module-info.class
+com/nucleo4dev/todo_list/App.class
+com/nucleo4dev/todo_list/service/TodoListService.class

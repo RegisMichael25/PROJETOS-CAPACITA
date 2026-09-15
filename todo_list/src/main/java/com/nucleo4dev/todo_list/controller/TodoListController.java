@@ -1,5 +1,6 @@
 package com.nucleo4dev.todo_list.controller;
 
+import com.nucleo4dev.todo_list.model.Tarefa;
 import com.nucleo4dev.todo_list.service.TodoListService;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -22,7 +23,7 @@ public class TodoListController {
 
     @FXML
     private void addTask() throws IOException {
-        array = service.addTask(inputTask.getText());
+        array = service.addTask(new Tarefa(inputTask.getText(), null, false));
 
         String novoItem = array.get(array.size() - 1);
 
