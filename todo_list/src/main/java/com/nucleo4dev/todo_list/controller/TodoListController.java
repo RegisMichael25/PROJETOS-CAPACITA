@@ -7,7 +7,6 @@ import javafx.fxml.FXML;
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
-import javafx.scene.control.ProgressIndicator;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -23,22 +22,22 @@ public class TodoListController {
 
     @FXML
     private void addTask() throws IOException {
-    array = service.addTask(inputTask.getText());
-    
-    String novoItem = array.get(array.size() - 1);
-    
-    HBox hbox = new HBox();
-    CheckBox check = new CheckBox();
-    Button but = new Button();
-    check.setText(novoItem);
-    check.setStyle("-fx-padding: 5px;");
-    but.setText("Remover");
-    HBox.setMargin(check, new Insets(0, 100, 0, 0));
-    hbox.getChildren().addAll(check, but);
-    vCheckBox.getChildren().add(hbox);
-    
-    inputTask.setText("");
-}
+        array = service.addTask(inputTask.getText());
+
+        String novoItem = array.get(array.size() - 1);
+
+        HBox hbox = new HBox();
+        CheckBox check = new CheckBox();
+        Button but = new Button();
+        check.setText(novoItem);
+        check.setStyle("-fx-padding: 5px;");
+        but.setText("Remover");
+        HBox.setMargin(check, new Insets(0, 100, 0, 0));
+        hbox.getChildren().addAll(check, but);
+        vCheckBox.getChildren().add(hbox);
+
+        inputTask.setText("");
+    }
     
     @FXML
     private void removeTask() throws IOException {
