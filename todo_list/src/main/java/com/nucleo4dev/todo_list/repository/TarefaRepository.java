@@ -32,4 +32,10 @@ public class TarefaRepository {
             System.out.println(ex.getStackTrace());
         }
     }
+
+    public void delete() {
+
+    }
+
+
 }

@@ -1,0 +1,59 @@
+
+
+# Compilação Java & Diretórios de Build Maven / Gradle
+target/
+out/
+bin/
+build/
+*.class
+
+# Arquivos de Pacote
+*.jar
+*.war
+*.ear
+
+# Logs e Cache de Build
+.gradle/
+*.log
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# NetBeans
+nbproject/private/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+nbactions-temp.xml
+
+# Eclipse
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings/
+.springBeans
+.sts4-cache
+
+# Visual Studio Code
+.vscode/
+
+# Arquivos do Sistema Operacional
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Arquivos de Ambiente e Temporários
+.env
+.env.local
+*.tmp
+*.bak
+*.swp
