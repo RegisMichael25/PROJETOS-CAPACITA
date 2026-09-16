@@ -10,19 +10,19 @@ import java.util.ArrayList;
  */
 public class TodoListService {
     
-    ArrayList<Tarefa> tasks = new ArrayList();
+    ArrayList<Tarefa> taskList = new ArrayList();
     TarefaRepository repository = new TarefaRepository();
     
     public TodoListService (){}
     
-    public ArrayList<Tarefa> addTask(Tarefa task) {
-        if() {
-        } else {
-            repository.salvar(task);
-            tasks.add(task);
+    public ArrayList<Tarefa> addTask(Tarefa tarefa) {
+        if(tarefa) {
+            repository.salvar(tarefa);
+            taskList.add(tarefa);
             System.out.println("Tarefa criada com sucesso!");
-            return tasks;
-        }
+            return taskList;
+        } 
+        
         System.out.println("A tarefa deve conter pelo menos 1 caractere que faça sentido para voce! ");
         return null;
     }
